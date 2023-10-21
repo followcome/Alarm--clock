@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="number" id="dis"> 
+   <button onclick="myFunc()">click Me</button>
+
+   <script type="text/javascript">
+     num=false;
+    function myFunc() {
+
+        let b=dis.value;
+        if (!num && b*3 <=10000) {
+            dis.value*=3;  
+        }else if (!num && b*3 >10000) {
+            num=true;
+            dis.value-=500;
+            
+        }else if (num && b-500 >=50) {
+            dis.value-=500;
+            
+        }else if (num && b-500 <=50) {
+            num=false;
+            dis.value*=3; 
+        }
+        
+    }
+
+   </script>
+
+
+
+
+</body>
+</html>
